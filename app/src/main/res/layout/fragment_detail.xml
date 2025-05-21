@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.DetailFragment">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="45dp"
+        android:text="TextView"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewrate"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+
+    <TextView
+        android:id="@+id/textViewLang"
+        android:layout_width="38dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/text_design"
+        android:gravity="center"
+        android:text="en"
+        android:textSize="17dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewDate"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <TextView
+        android:id="@+id/textViewrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="45dp"
+        android:text="TextView"
+        android:textColor="#F60505"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:isIndicator="true"
+        android:numStars="1"
+        android:progressBackgroundTint="#F57F17"
+        android:progressTint="#EF071B"
+        android:rating="10"
+        android:scaleX="1.8"
+        android:scaleY="1.8"
+        android:stepSize="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="17dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/icon_red"
+        app:layout_constraintStart_toEndOf="@+id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#F60C0C"
+        android:maxLines="1"
+        android:text="Play"
+        android:textSize="10dp"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/ic_check"
+        app:iconGravity="textStart"
+        app:iconPadding="2dp"
+        app:iconSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewrate"
+        app:strokeColor="#CC0505"
+        app:strokeWidth="2dp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton2"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FAF5F5"
+        android:maxLines="1"
+        android:text="Download"
+        android:textColor="#FF0404"
+        android:textSize="10dp"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/redicon2"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="17dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/materialButton"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLang"
+        app:strokeColor="#CC0505"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/textViewMetn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:maxLines="4"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCast"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMetn" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvVideo"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTrailer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSimilar"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMore" />
+
+    <TextView
+        android:id="@+id/textViewTrailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Trailer"
+        android:textColor="#9098B1"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvCast" />
+
+    <TextView
+        android:id="@+id/textViewMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="More Like This"
+        android:textSize="20dp"
+        android:textColor="#9098B1"
+        app:layout_constraintEnd_toStartOf="@+id/textViewComments"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewTrailer"
+        app:layout_constraintTop_toBottomOf="@+id/rvCast" />
+
+    <TextView
+        android:id="@+id/textViewComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="Comments"
+        android:textColor="#9098B1"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvCast" />
+
+
+    <View
+        android:id="@+id/tabIndicator"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="#E90505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTrailer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvComment"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="3dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabIndicator"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
